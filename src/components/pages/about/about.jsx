@@ -1,20 +1,40 @@
 import "./about.css";
-import { Image } from "react-bootstrap";
-import { useState } from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
 
 const AboutMe = () => {
-  const [eldad, setEldad] = useState("");
+  const [eldad, setEldad] = useState([]);
+  const getEldadData = async () => {
+    try {
+      return await fetch("http://localhost:5000/api/eldad/getInfo")
+        .then((response) => response.json())
+        .then((response) => setEldad(response.data));
+    } catch (error) {
+      console.log({ error });
+    }
+  };
+  useEffect(() => {
+    getEldadData();
+  }, []);
+  console.log(eldad);
   return (
     <div id="aboutMe" className="container text-center">
       <h1 className="display-4 mb-4 animate__animated animate__bounce">
-        Eldad Brhano
+        {eldad[0]?.name}
       </h1>
       <hr className="w-25 mx-auto mb-5"></hr>
-      <Image
-        src="/path/to/image.jpg"
-        alt="Personal Image"
-        style={{ width: "200px", height: "200px" }}
-      />
+      <Container>
+        <Row sm={12}>
+          <Image
+            src="/images/eldadImg.png"
+            alt="Personal Image"
+            style={{ width: "400px", height: "400px" }}
+          />
+          <Col className="mt-4">
+            <p>{eldad[0]?.aboutMe}</p>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
