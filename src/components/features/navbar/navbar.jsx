@@ -13,18 +13,18 @@ function MyNavbar() {
           <Nav.Link>
             <Link
               activeClass="active"
-              to="home"
+              to="projects"
               spy={true}
               smooth={true}
               duration={500}
             >
-              Home
+              Projects
             </Link>
           </Nav.Link>
           <Nav.Link>
             <Link
               activeClass="active"
-              to="about"
+              to="aboutMe"
               spy={true}
               smooth={true}
               duration={500}

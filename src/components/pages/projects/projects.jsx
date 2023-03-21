@@ -18,7 +18,7 @@ const Projects = () => {
   }, []);
   console.log(projects);
   return (
-    <Container className="projects-container">
+    <Container id="projects" className="projects-container">
       <div className="projectImg-div">
         <h2 className="project-heading">Projects</h2>
       </div>
