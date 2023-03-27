@@ -24,7 +24,7 @@ const Projects = () => {
       </div>
       <div className="projects-div">
         {projects?.map((project) => (
-          <ProjectCard key={projects._id} data={project} />
+          <ProjectCard key={project._id} data={project} />
         ))}
       </div>
       {/* </Col> */}
