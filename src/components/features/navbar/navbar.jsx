@@ -1,12 +1,14 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import { Link } from 'react-scroll';
-
-function MyNavbar() {
+import React from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { Link } from "react-scroll";
+import "./navbar.css";
+const MyNavbar = () => {
   return (
     <Navbar bg="light" expand="md">
-      <Navbar.Brand href="#">Logo</Navbar.Brand>
+      <Navbar.Brand>
+        <img id="logo" src="/images/logo.png" alt="programer" />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -35,7 +37,7 @@ function MyNavbar() {
           <Nav.Link>
             <Link
               activeClass="active"
-              to="contact"
+              to="contact-div"
               spy={true}
               smooth={true}
               duration={500}
@@ -47,6 +49,6 @@ function MyNavbar() {
       </Navbar.Collapse>
     </Navbar>
   );
-}
+};
 
 export default MyNavbar;

@@ -11,9 +11,9 @@ const ProjectCard = ({ data}) => {
         <Card.Text>
           {data?.desc}
         </Card.Text>
-        <a href={data?.githubLink}>
+        <a target="_blank" href={data?.githubLink}>
         <Button variant="outline-success" size="sm">Github</Button></a>{' '}
-        <a href={data?.url}>
+        <a target="_blank" href={data?.url}>
         <Button variant="outline-danger" size="sm">Live</Button>
         </a>
       </Card.Body>

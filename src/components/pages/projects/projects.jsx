@@ -16,7 +16,6 @@ const Projects = () => {
   useEffect(() => {
     getProjects();
   }, []);
-  console.log(projects);
   return (
     <Container id="projects" className="projects-container">
       <div className="projectImg-div">

@@ -23,6 +23,11 @@
   .error {
     color: red;
   }
+  #btn-contact-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
@@ -59,5 +64,11 @@
   
   .error {
     color: red;
+  }
+  #contact-div{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

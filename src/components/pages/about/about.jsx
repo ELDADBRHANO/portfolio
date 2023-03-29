@@ -16,7 +16,6 @@ const AboutMe = () => {
   useEffect(() => {
     getEldadData();
   }, []);
-  console.log(eldad);
   return (
     <div id="aboutMe" className="container text-center">
       <h1 className="display-4 mb-4 animate__animated animate__bounce">
