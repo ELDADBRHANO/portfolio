@@ -6,7 +6,7 @@ const AboutMe = () => {
   const [eldad, setEldad] = useState([]);
   const getEldadData = async () => {
     try {
-      return await fetch("http://localhost:5000/api/eldad/getInfo")
+      return await fetch("https://portfolio-server-zz76.onrender.com/api/eldad/getInfo")
         .then((response) => response.json())
         .then((response) => setEldad(response.data));
     } catch (error) {

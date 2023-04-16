@@ -6,7 +6,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const getProjects = async () => {
     try {
-      return await fetch("http://localhost:5000/api/projects/getProjects")
+      return await fetch("https://portfolio-server-zz76.onrender.com/api/projects/getProjects")
         .then((response) => response.json())
         .then((response) => setProjects(response.data));
     } catch (error) {
