@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import {  Container } from "react-bootstrap";
 import ProjectCard from "../../features/projectCard/projectCard";
 import "./projects.css";
 const Projects = () => {
@@ -26,7 +26,6 @@ const Projects = () => {
           <ProjectCard key={project._id} data={project} />
         ))}
       </div>
-      {/* </Col> */}
     </Container>
   );
 };

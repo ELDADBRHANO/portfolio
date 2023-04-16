@@ -1,7 +1,6 @@
 import './projectCard.css'
 import React from 'react';
-import { Card, Button,Image } from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Card, Button } from 'react-bootstrap';
 const ProjectCard = ({ data}) => {
   return (
     <Card className="d-flex align-items-center mainCard">
@@ -11,9 +10,9 @@ const ProjectCard = ({ data}) => {
         <Card.Text>
           {data?.desc}
         </Card.Text>
-        <a target="_blank" href={data?.githubLink}>
+        <a target="_blank" rel="noreferrer" href={data?.githubLink}>
         <Button variant="outline-success" size="sm">Github</Button></a>{' '}
-        <a target="_blank" href={data?.url}>
+        <a target="_blank" rel="noreferrer" href={data?.url}>
         <Button variant="outline-danger" size="sm">Live</Button>
         </a>
       </Card.Body>

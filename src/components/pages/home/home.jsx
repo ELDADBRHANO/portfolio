@@ -1,7 +1,6 @@
 import AboutMe from "../about/about";
 import Header from "../header/header";
-import { Col, Container } from "react-bootstrap";
-import ProjectCard from "../../features/projectCard/projectCard";
+import { Container } from "react-bootstrap";
 import Projects from "../projects/projects";
 import Contact from "../contact/contact";
 import { ToastContainer } from "react-toastify";
